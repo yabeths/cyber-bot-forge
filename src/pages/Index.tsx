@@ -38,53 +38,53 @@ const Index = () => {
       title: "Real Estate",
       description: "Lead qualification, property matching, and 24/7 client support",
       features: ["Lead Qualification", "Property Search", "Appointment Booking", "Market Updates"],
-      color: "from-neon-purple to-neon-blue"
+      color: "from-neon-orange to-neon-purple"
     },
     {
       icon: ShoppingCart,
       title: "E-commerce",
       description: "Product recommendations, order tracking, and customer support",
       features: ["Product Discovery", "Order Management", "Support Tickets", "Upselling"],
-      color: "from-neon-blue to-neon-teal"
+      color: "from-neon-purple to-neon-blue"
     },
     {
       icon: Heart,
       title: "Healthcare",
       description: "Appointment scheduling, symptom checking, and patient engagement",
       features: ["Appointment Booking", "Health Assessments", "Prescription Reminders", "FAQ Support"],
-      color: "from-neon-pink to-neon-purple"
+      color: "from-neon-orange to-neon-pink"
     },
     {
       icon: GraduationCap,
       title: "Education",
       description: "Student support, course guidance, and learning assistance",
       features: ["Course Recommendations", "Study Schedules", "Assignment Help", "Progress Tracking"],
-      color: "from-neon-teal to-neon-green"
+      color: "from-neon-blue to-neon-teal"
     },
     {
       icon: Headphones,
       title: "Customer Support",
       description: "Instant responses, ticket routing, and satisfaction tracking",
       features: ["Instant Responses", "Ticket Creation", "FAQ Database", "Escalation Management"],
-      color: "from-neon-green to-neon-yellow"
+      color: "from-neon-teal to-neon-green"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-orange-900/20 to-purple-900/40 cyber-grid">
       {/* Header */}
       <header className="relative z-50 p-6">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Bot className="h-8 w-8 text-neon-purple animate-glow-pulse" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
+            <Bot className="h-8 w-8 text-neon-orange animate-glow-pulse" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-neon-orange to-neon-purple bg-clip-text text-transparent">
               CyberBots AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#niches" className="text-gray-300 hover:text-neon-purple transition-colors">Niches</a>
-            <a href="#features" className="text-gray-300 hover:text-neon-purple transition-colors">Features</a>
-            <a href="#demo" className="text-gray-300 hover:text-neon-purple transition-colors">Get Demo</a>
+            <a href="#niches" className="text-gray-300 hover:text-neon-orange transition-colors">Niches</a>
+            <a href="#features" className="text-gray-300 hover:text-neon-orange transition-colors">Features</a>
+            <a href="#demo" className="text-gray-300 hover:text-neon-orange transition-colors">Get Demo</a>
             <Button className="cyber-button">Contact Us</Button>
           </div>
         </nav>
@@ -92,12 +92,12 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-neon-purple/20 via-transparent to-neon-blue/20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-neon-orange/20 via-transparent to-neon-purple/20 animate-pulse"></div>
         <div className={`max-w-7xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
           <h1 className="cyber-title mb-6 animate-neon-flicker">
             Revolutionary AI Chatbots
             <br />
-            <span className="bg-gradient-to-r from-neon-pink to-neon-teal bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neon-orange to-neon-teal bg-clip-text text-transparent">
               For Every Business Niche
             </span>
           </h1>
@@ -110,7 +110,7 @@ const Index = () => {
               Get Your Custom Bot
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" className="border-neon-purple text-neon-purple hover:bg-neon-purple/10 text-lg px-12 py-6">
+            <Button variant="outline" className="border-neon-orange text-neon-orange hover:bg-neon-orange/10 text-lg px-12 py-6">
               Watch Demo
             </Button>
           </div>
@@ -120,7 +120,7 @@ const Index = () => {
       {/* Features Overview */}
       <section id="features" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-neon-orange to-neon-purple bg-clip-text text-transparent">
             Why Choose CyberBots AI?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -132,7 +132,7 @@ const Index = () => {
             ].map((feature, index) => (
               <Card key={index} className="cyber-card group hover:animate-float">
                 <CardHeader className="text-center">
-                  <feature.icon className="h-12 w-12 mx-auto text-neon-purple group-hover:text-neon-blue transition-colors mb-4" />
+                  <feature.icon className="h-12 w-12 mx-auto text-neon-orange group-hover:text-neon-purple transition-colors mb-4" />
                   <CardTitle className="text-white">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -145,9 +145,9 @@ const Index = () => {
       </section>
 
       {/* Niche Showcases */}
-      <section id="niches" className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/30">
+      <section id="niches" className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-orange-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-neon-pink to-neon-teal bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-neon-orange to-neon-teal bg-clip-text text-transparent">
             Industry-Specific Solutions
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -187,7 +187,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="cyber-card p-8 flex items-center justify-center">
-                <div className="text-2xl font-bold text-neon-purple">BRAND {i}</div>
+                <div className="text-2xl font-bold text-neon-orange">BRAND {i}</div>
               </div>
             ))}
           </div>
@@ -198,7 +198,7 @@ const Index = () => {
               { metric: "24/7", label: "Support Available", icon: MessageSquare }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <stat.icon className="h-12 w-12 mx-auto text-neon-purple mb-4" />
+                <stat.icon className="h-12 w-12 mx-auto text-neon-orange mb-4" />
                 <div className="text-4xl font-bold text-white mb-2">{stat.metric}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
@@ -208,10 +208,10 @@ const Index = () => {
       </section>
 
       {/* Demo Request Form */}
-      <section id="demo" className="py-20 px-6 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+      <section id="demo" className="py-20 px-6 bg-gradient-to-r from-orange-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto">
           <div className="cyber-card p-8">
-            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-neon-orange to-neon-pink bg-clip-text text-transparent">
               Get Your Custom Chatbot Demo
             </h2>
             <form onSubmit={handleFormSubmit} className="space-y-6">
@@ -284,11 +284,11 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-neon-purple/30">
+      <footer className="py-12 px-6 border-t border-neon-orange/30">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <Bot className="h-8 w-8 text-neon-purple" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
+            <Bot className="h-8 w-8 text-neon-orange" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-neon-orange to-neon-purple bg-clip-text text-transparent">
               CyberBots AI
             </span>
           </div>
@@ -296,9 +296,9 @@ const Index = () => {
             Revolutionizing business communication with AI-powered chatbots
           </p>
           <div className="flex justify-center space-x-8 text-gray-400">
-            <a href="#" className="hover:text-neon-purple transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-neon-purple transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-neon-purple transition-colors">Contact</a>
+            <a href="#" className="hover:text-neon-orange transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-neon-orange transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-neon-orange transition-colors">Contact</a>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 text-gray-500">
             © 2024 CyberBots AI. All rights reserved.

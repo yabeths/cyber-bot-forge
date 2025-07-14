@@ -63,8 +63,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Cyberpunk neon colors
+				// Cyberpunk neon colors with new orange primary
 				neon: {
+					orange: '#ff6b08',
 					purple: '#a855f7',
 					blue: '#3b82f6',
 					pink: '#ec4899',
@@ -97,10 +98,10 @@ export default {
 				},
 				'glow-pulse': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(168, 85, 247, 0.5)'
+						boxShadow: '0 0 20px rgba(255, 107, 8, 0.5)'
 					},
 					'50%': {
-						boxShadow: '0 0 40px rgba(168, 85, 247, 0.8)'
+						boxShadow: '0 0 40px rgba(255, 107, 8, 0.8)'
 					}
 				},
 				'neon-flicker': {
@@ -131,8 +132,8 @@ export default {
 				'float': 'float 3s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'cyber-grid': "linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px)",
-				'neon-gradient': 'linear-gradient(135deg, #a855f7, #3b82f6, #ec4899, #06b6d4)'
+				'cyber-grid': "linear-gradient(rgba(255, 107, 8, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 8, 0.1) 1px, transparent 1px)",
+				'neon-gradient': 'linear-gradient(135deg, #ff6b08, #a855f7, #3b82f6, #ec4899)'
 			},
 			backgroundSize: {
 				'cyber-grid': '50px 50px'
