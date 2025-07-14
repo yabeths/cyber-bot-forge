@@ -3,48 +3,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Refined Cyberpunk design system with streamlined color palette */
-
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 4%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 324 100% 59%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 69%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 180 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 12%;
-    --input: 0 0% 12%;
-    --ring: 324 100% 59%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 324 100% 59%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 12%;
-    --sidebar-ring: 324 100% 59%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 217 91% 60%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -55,238 +92,6 @@
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, #0A0A0A 0%, #1E1E1E 100%);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  /* Refined cyberpunk typography */
-  .cyber-title {
-    @apply text-4xl md:text-6xl font-bold;
-    background: linear-gradient(135deg, #FF2DA5, #00FFFF, #39FF14);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(255, 45, 165, 0.5);
-    animation: glow-rotate 4s linear infinite;
-  }
-
-  .cyber-subtitle {
-    @apply text-lg md:text-xl;
-    color: #B0B0B0;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-  }
-
-  /* Enhanced neon glow effects */
-  .neon-glow {
-    box-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor,
-      0 0 20px currentColor,
-      0 0 35px currentColor;
-    transition: all 0.3s ease;
-  }
-
-  .neon-glow:hover {
-    box-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 30px currentColor,
-      0 0 40px currentColor,
-      0 0 70px currentColor;
-  }
-
-  .neon-border {
-    border: 2px solid transparent;
-    background: linear-gradient(135deg, rgba(255, 45, 165, 0.3), rgba(0, 255, 255, 0.3)) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: exclude;
-    mask-composite: exclude;
-  }
-
-  /* Refined grid background */
-  .cyber-grid {
-    background-image: 
-      linear-gradient(rgba(255, 45, 165, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    position: relative;
-  }
-
-  .cyber-grid::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(157, 0, 255, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  /* Enhanced animated cards */
-  .cyber-card {
-    background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(10, 10, 10, 0.6));
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 45, 165, 0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cyber-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
-  }
-
-  .cyber-card:hover {
-    border-color: rgba(0, 255, 255, 0.6);
-    box-shadow: 
-      0 10px 40px rgba(255, 45, 165, 0.2),
-      0 0 20px rgba(0, 255, 255, 0.3);
-    transform: translateY(-5px);
-  }
-
-  .cyber-card:hover::before {
-    left: 100%;
-  }
-
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: rgba(10, 10, 10, 0.8);
-    border-radius: 6px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #FF2DA5, #00FFFF);
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(255, 45, 165, 0.5);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #ff0080, #00e6e6);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
-  }
-}
-
-/* Refined utility classes */
-@layer components {
-  .cyber-button {
-    @apply px-8 py-4 font-semibold rounded-lg relative overflow-hidden;
-    background: linear-gradient(135deg, #FF2DA5, #00FFFF);
-    color: #FFFFFF;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-
-  .cyber-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
-  }
-
-  .cyber-button:hover {
-    box-shadow: 
-      0 0 20px rgba(255, 45, 165, 0.6),
-      0 0 40px rgba(0, 255, 255, 0.4);
-    transform: translateY(-2px);
-    border-color: rgba(57, 255, 20, 0.5);
-  }
-
-  .cyber-button:hover::before {
-    left: 100%;
-  }
-
-  .cyber-button-secondary {
-    @apply px-8 py-4 font-semibold rounded-lg relative overflow-hidden;
-    background: linear-gradient(135deg, #9D00FF, #39FF14);
-    color: #FFFFFF;
-    border: 2px solid rgba(157, 0, 255, 0.5);
-    transition: all 0.3s ease;
-  }
-
-  .cyber-button-secondary:hover {
-    box-shadow: 
-      0 0 20px rgba(157, 0, 255, 0.6),
-      0 0 40px rgba(57, 255, 20, 0.4);
-    transform: translateY(-2px);
-    border-color: rgba(0, 255, 255, 0.7);
-  }
-
-  .cyber-input {
-    @apply rounded-lg px-4 py-3 transition-all duration-300;
-    background: rgba(30, 30, 30, 0.8);
-    border: 2px solid rgba(0, 255, 255, 0.3);
-    color: #FFFFFF;
-    backdrop-filter: blur(5px);
-  }
-
-  .cyber-input::placeholder {
-    color: #B0B0B0;
-  }
-
-  .cyber-input:focus {
-    border-color: #FF2DA5;
-    box-shadow: 
-      0 0 20px rgba(255, 45, 165, 0.3),
-      0 0 0 4px rgba(255, 45, 165, 0.1);
-    outline: none;
-  }
-
-  .cyber-select {
-    @apply rounded-lg px-4 py-3 transition-all duration-300;
-    background: rgba(30, 30, 30, 0.8);
-    border: 2px solid rgba(0, 255, 255, 0.3);
-    color: #FFFFFF;
-    backdrop-filter: blur(5px);
-  }
-
-  .cyber-select:focus {
-    border-color: #FF2DA5;
-    box-shadow: 
-      0 0 20px rgba(255, 45, 165, 0.3),
-      0 0 0 4px rgba(255, 45, 165, 0.1);
-    outline: none;
-  }
-
-  .pulse-glow {
-    animation: neon-pulse 2s ease-in-out infinite;
-  }
-
-  .text-neon-magenta {
-    color: #FF2DA5;
-  }
-
-  .text-neon-cyan {
-    color: #00FFFF;
-  }
-
-  .text-neon-green {
-    color: #39FF14;
-  }
-
-  .text-neon-violet {
-    color: #9D00FF;
-  }
-
-  .text-soft-gray {
-    color: #B0B0B0;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
