@@ -38,53 +38,53 @@ const Index = () => {
       title: "Real Estate",
       description: "Lead qualification, property matching, and 24/7 client support",
       features: ["Lead Qualification", "Property Search", "Appointment Booking", "Market Updates"],
-      color: "from-neon-orange to-neon-purple"
+      color: "from-cyber-neon-magenta to-cyber-electric-cyan"
     },
     {
       icon: ShoppingCart,
       title: "E-commerce",
       description: "Product recommendations, order tracking, and customer support",
       features: ["Product Discovery", "Order Management", "Support Tickets", "Upselling"],
-      color: "from-neon-purple to-neon-blue"
+      color: "from-cyber-electric-cyan to-cyber-lime-green"
     },
     {
       icon: Heart,
       title: "Healthcare",
       description: "Appointment scheduling, symptom checking, and patient engagement",
       features: ["Appointment Booking", "Health Assessments", "Prescription Reminders", "FAQ Support"],
-      color: "from-neon-orange to-neon-pink"
+      color: "from-cyber-hot-violet to-cyber-laser-pink"
     },
     {
       icon: GraduationCap,
       title: "Education",
       description: "Student support, course guidance, and learning assistance",
       features: ["Course Recommendations", "Study Schedules", "Assignment Help", "Progress Tracking"],
-      color: "from-neon-blue to-neon-teal"
+      color: "from-cyber-lime-green to-cyber-digital-yellow"
     },
     {
       icon: Headphones,
       title: "Customer Support",
       description: "Instant responses, ticket routing, and satisfaction tracking",
       features: ["Instant Responses", "Ticket Creation", "FAQ Database", "Escalation Management"],
-      color: "from-neon-teal to-neon-green"
+      color: "from-cyber-neon-coral to-cyber-hot-violet"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-orange-900/20 to-purple-900/40 cyber-grid">
+    <div className="min-h-screen bg-cyber-gradient cyber-grid">
       {/* Header */}
       <header className="relative z-50 p-6">
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Bot className="h-8 w-8 text-neon-orange animate-glow-pulse" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-neon-orange to-neon-purple bg-clip-text text-transparent">
+            <Bot className="h-8 w-8 text-neon-magenta pulse-glow" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyber-neon-magenta to-cyber-electric-cyan bg-clip-text text-transparent">
               CyberBots AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#niches" className="text-gray-300 hover:text-neon-orange transition-colors">Niches</a>
-            <a href="#features" className="text-gray-300 hover:text-neon-orange transition-colors">Features</a>
-            <a href="#demo" className="text-gray-300 hover:text-neon-orange transition-colors">Get Demo</a>
+            <a href="#niches" className="text-soft-gray hover:text-neon-cyan transition-colors">Niches</a>
+            <a href="#features" className="text-soft-gray hover:text-neon-cyan transition-colors">Features</a>
+            <a href="#demo" className="text-soft-gray hover:text-neon-cyan transition-colors">Get Demo</a>
             <Button className="cyber-button">Contact Us</Button>
           </div>
         </nav>
@@ -92,12 +92,12 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-neon-orange/20 via-transparent to-neon-purple/20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyber-neon-magenta/20 via-transparent to-cyber-electric-cyan/20 animate-cyber-flicker"></div>
         <div className={`max-w-7xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
-          <h1 className="cyber-title mb-6 animate-neon-flicker">
+          <h1 className="cyber-title mb-6">
             Revolutionary AI Chatbots
             <br />
-            <span className="bg-gradient-to-r from-neon-orange to-neon-teal bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyber-lime-green to-cyber-hot-violet bg-clip-text text-transparent">
               For Every Business Niche
             </span>
           </h1>
@@ -110,7 +110,7 @@ const Index = () => {
               Get Your Custom Bot
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" className="border-neon-orange text-neon-orange hover:bg-neon-orange/10 text-lg px-12 py-6">
+            <Button className="cyber-button-secondary text-lg px-12 py-6">
               Watch Demo
             </Button>
           </div>
@@ -120,23 +120,23 @@ const Index = () => {
       {/* Features Overview */}
       <section id="features" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-neon-orange to-neon-purple bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyber-neon-magenta to-cyber-electric-cyan bg-clip-text text-transparent">
             Why Choose CyberBots AI?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Zap, title: "Lightning Fast", description: "Deploy in minutes, not months" },
-              { icon: Shield, title: "Enterprise Security", description: "Bank-level encryption & compliance" },
-              { icon: Users, title: "Multi-Channel", description: "Web, mobile, social media integration" },
-              { icon: TrendingUp, title: "Analytics", description: "Real-time performance insights" }
+              { icon: Zap, title: "Lightning Fast", description: "Deploy in minutes, not months", color: "text-neon-cyan" },
+              { icon: Shield, title: "Enterprise Security", description: "Bank-level encryption & compliance", color: "text-neon-magenta" },
+              { icon: Users, title: "Multi-Channel", description: "Web, mobile, social media integration", color: "text-neon-green" },
+              { icon: TrendingUp, title: "Analytics", description: "Real-time performance insights", color: "text-neon-violet" }
             ].map((feature, index) => (
               <Card key={index} className="cyber-card group hover:animate-float">
                 <CardHeader className="text-center">
-                  <feature.icon className="h-12 w-12 mx-auto text-neon-orange group-hover:text-neon-purple transition-colors mb-4" />
-                  <CardTitle className="text-white">{feature.title}</CardTitle>
+                  <feature.icon className={`h-12 w-12 mx-auto ${feature.color} group-hover:pulse-glow transition-all mb-4`} />
+                  <CardTitle className="text-cyber-white">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-gray-300 text-center">{feature.description}</CardDescription>
+                  <CardDescription className="text-soft-gray text-center">{feature.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -145,32 +145,32 @@ const Index = () => {
       </section>
 
       {/* Niche Showcases */}
-      <section id="niches" className="py-20 px-6 bg-gradient-to-r from-gray-900/50 to-orange-900/30">
+      <section id="niches" className="py-20 px-6 bg-gradient-to-r from-cyber-jet-black/50 to-cyber-midnight-blue/50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-neon-orange to-neon-teal bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyber-lime-green to-cyber-hot-violet bg-clip-text text-transparent">
             Industry-Specific Solutions
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {niches.map((niche, index) => (
               <Card key={index} className="cyber-card group relative overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${niche.color} opacity-5 group-hover:opacity-10 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${niche.color} opacity-5 group-hover:opacity-15 transition-opacity`}></div>
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-4">
-                    <niche.icon className={`h-8 w-8 bg-gradient-to-r ${niche.color} bg-clip-text text-transparent`} />
-                    <CardTitle className="text-white text-xl">{niche.title}</CardTitle>
+                    <niche.icon className="h-8 w-8 text-neon-cyan group-hover:text-neon-magenta transition-colors" />
+                    <CardTitle className="text-cyber-white text-xl">{niche.title}</CardTitle>
                   </div>
-                  <CardDescription className="text-gray-300">{niche.description}</CardDescription>
+                  <CardDescription className="text-soft-gray">{niche.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {niche.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
+                      <li key={featureIndex} className="flex items-center text-soft-gray">
                         <CheckCircle className="h-4 w-4 text-neon-green mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Button className={`mt-6 w-full bg-gradient-to-r ${niche.color} hover:shadow-lg transition-all`}>
+                  <Button className={`mt-6 w-full bg-gradient-to-r ${niche.color} hover:shadow-neon-magenta transition-all`}>
                     Explore {niche.title} Bots
                   </Button>
                 </CardContent>
@@ -183,24 +183,24 @@ const Index = () => {
       {/* Social Proof */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12 text-white">Trusted by Industry Leaders</h2>
+          <h2 className="text-3xl font-bold mb-12 text-cyber-white">Trusted by Industry Leaders</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="cyber-card p-8 flex items-center justify-center">
-                <div className="text-2xl font-bold text-neon-orange">BRAND {i}</div>
+                <div className="text-2xl font-bold text-neon-cyan">BRAND {i}</div>
               </div>
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { metric: "500+", label: "Active Chatbots", icon: Bot },
-              { metric: "98%", label: "Customer Satisfaction", icon: Star },
-              { metric: "24/7", label: "Support Available", icon: MessageSquare }
+              { metric: "500+", label: "Active Chatbots", icon: Bot, color: "text-neon-magenta" },
+              { metric: "98%", label: "Customer Satisfaction", icon: Star, color: "text-neon-green" },
+              { metric: "24/7", label: "Support Available", icon: MessageSquare, color: "text-neon-cyan" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <stat.icon className="h-12 w-12 mx-auto text-neon-orange mb-4" />
-                <div className="text-4xl font-bold text-white mb-2">{stat.metric}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <stat.icon className={`h-12 w-12 mx-auto ${stat.color} pulse-glow mb-4`} />
+                <div className="text-4xl font-bold text-cyber-white mb-2">{stat.metric}</div>
+                <div className="text-soft-gray">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -208,16 +208,16 @@ const Index = () => {
       </section>
 
       {/* Demo Request Form */}
-      <section id="demo" className="py-20 px-6 bg-gradient-to-r from-orange-900/30 to-purple-900/30">
+      <section id="demo" className="py-20 px-6 bg-gradient-to-r from-cyber-midnight-blue/30 to-cyber-charcoal/30">
         <div className="max-w-4xl mx-auto">
           <div className="cyber-card p-8">
-            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-neon-orange to-neon-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyber-neon-magenta to-cyber-laser-pink bg-clip-text text-transparent">
               Get Your Custom Chatbot Demo
             </h2>
             <form onSubmit={handleFormSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white mb-2">Full Name *</label>
+                  <label className="block text-cyber-white mb-2">Full Name *</label>
                   <Input
                     className="cyber-input"
                     value={formData.name}
@@ -227,7 +227,7 @@ const Index = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-white mb-2">Email Address *</label>
+                  <label className="block text-cyber-white mb-2">Email Address *</label>
                   <Input
                     className="cyber-input"
                     type="email"
@@ -240,7 +240,7 @@ const Index = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-white mb-2">Business Name</label>
+                  <label className="block text-cyber-white mb-2">Business Name</label>
                   <Input
                     className="cyber-input"
                     value={formData.business}
@@ -249,9 +249,9 @@ const Index = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-white mb-2">Industry/Niche</label>
+                  <label className="block text-cyber-white mb-2">Industry/Niche</label>
                   <select
-                    className="cyber-input w-full"
+                    className="cyber-select w-full"
                     value={formData.niche}
                     onChange={(e) => setFormData({...formData, niche: e.target.value})}
                   >
@@ -266,7 +266,7 @@ const Index = () => {
                 </div>
               </div>
               <div>
-                <label className="block text-white mb-2">Tell us about your needs</label>
+                <label className="block text-cyber-white mb-2">Tell us about your needs</label>
                 <Textarea
                   className="cyber-input min-h-[120px]"
                   value={formData.message}
@@ -284,23 +284,23 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-neon-orange/30">
+      <footer className="py-12 px-6 border-t border-cyber-neon-magenta/30">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <Bot className="h-8 w-8 text-neon-orange" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-neon-orange to-neon-purple bg-clip-text text-transparent">
+            <Bot className="h-8 w-8 text-neon-magenta pulse-glow" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyber-neon-magenta to-cyber-electric-cyan bg-clip-text text-transparent">
               CyberBots AI
             </span>
           </div>
-          <p className="text-gray-400 mb-6">
+          <p className="text-soft-gray mb-6">
             Revolutionizing business communication with AI-powered chatbots
           </p>
-          <div className="flex justify-center space-x-8 text-gray-400">
-            <a href="#" className="hover:text-neon-orange transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-neon-orange transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-neon-orange transition-colors">Contact</a>
+          <div className="flex justify-center space-x-8 text-soft-gray">
+            <a href="#" className="hover:text-neon-cyan transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-neon-cyan transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-neon-cyan transition-colors">Contact</a>
           </div>
-          <div className="mt-8 pt-8 border-t border-gray-700 text-gray-500">
+          <div className="mt-8 pt-8 border-t border-cyber-charcoal text-soft-gray">
             © 2024 CyberBots AI. All rights reserved.
           </div>
         </div>
