@@ -52,21 +52,21 @@ const Index = () => {
       title: "Healthcare",
       description: "Appointment scheduling, symptom checking, and patient engagement",
       features: ["Appointment Booking", "Health Assessments", "Prescription Reminders", "FAQ Support"],
-      color: "from-cyber-hot-violet to-cyber-laser-pink"
+      color: "from-cyber-hot-violet to-cyber-neon-magenta"
     },
     {
       icon: GraduationCap,
       title: "Education",
       description: "Student support, course guidance, and learning assistance",
       features: ["Course Recommendations", "Study Schedules", "Assignment Help", "Progress Tracking"],
-      color: "from-cyber-lime-green to-cyber-digital-yellow"
+      color: "from-cyber-lime-green to-cyber-hot-violet"
     },
     {
       icon: Headphones,
       title: "Customer Support",
       description: "Instant responses, ticket routing, and satisfaction tracking",
       features: ["Instant Responses", "Ticket Creation", "FAQ Database", "Escalation Management"],
-      color: "from-cyber-neon-coral to-cyber-hot-violet"
+      color: "from-cyber-electric-cyan to-cyber-hot-violet"
     }
   ];
 
@@ -145,7 +145,7 @@ const Index = () => {
       </section>
 
       {/* Niche Showcases */}
-      <section id="niches" className="py-20 px-6 bg-gradient-to-r from-cyber-jet-black/50 to-cyber-midnight-blue/50">
+      <section id="niches" className="py-20 px-6 bg-gradient-to-r from-cyber-jet-black/50 to-cyber-charcoal/50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyber-lime-green to-cyber-hot-violet bg-clip-text text-transparent">
             Industry-Specific Solutions
@@ -208,10 +208,10 @@ const Index = () => {
       </section>
 
       {/* Demo Request Form */}
-      <section id="demo" className="py-20 px-6 bg-gradient-to-r from-cyber-midnight-blue/30 to-cyber-charcoal/30">
+      <section id="demo" className="py-20 px-6 bg-gradient-to-r from-cyber-charcoal/30 to-cyber-jet-black/30">
         <div className="max-w-4xl mx-auto">
           <div className="cyber-card p-8">
-            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyber-neon-magenta to-cyber-laser-pink bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyber-neon-magenta to-cyber-electric-cyan bg-clip-text text-transparent">
               Get Your Custom Chatbot Demo
             </h2>
             <form onSubmit={handleFormSubmit} className="space-y-6">

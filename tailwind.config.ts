@@ -63,21 +63,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Cyberpunk neon colors
+				// Refined Cyberpunk color palette
 				cyber: {
 					// Base/Background colors
 					'jet-black': '#0A0A0A',
-					'midnight-blue': '#0D1B2A',
 					'charcoal': '#1E1E1E',
 					// Primary neon accents
 					'neon-magenta': '#FF2DA5',
 					'electric-cyan': '#00FFFF',
 					'lime-green': '#39FF14',
 					'hot-violet': '#9D00FF',
-					// Secondary accents
-					'laser-pink': '#FF00FF',
-					'digital-yellow': '#FFD300',
-					'neon-coral': '#FF6E40',
 					// Text colors
 					'white': '#FFFFFF',
 					'soft-gray': '#B0B0B0'
@@ -168,7 +163,7 @@ export default {
 			backgroundImage: {
 				'cyber-grid': "linear-gradient(rgba(255, 45, 165, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)",
 				'neon-gradient': 'linear-gradient(135deg, #FF2DA5, #00FFFF, #39FF14, #9D00FF)',
-				'cyber-gradient': 'linear-gradient(135deg, #0A0A0A 0%, #0D1B2A 50%, #1E1E1E 100%)'
+				'cyber-gradient': 'linear-gradient(135deg, #0A0A0A 0%, #1E1E1E 100%)'
 			},
 			backgroundSize: {
 				'cyber-grid': '50px 50px'
