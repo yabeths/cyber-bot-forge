@@ -1,80 +1,69 @@
-
 import React from 'react';
-import { Bot, Zap, Shield, Users, TrendingUp, MessageSquare, Star, CheckCircle } from 'lucide-react';
+import { Zap, MessageSquare, Brain, BarChart3, Shield, Clock, Users, Smartphone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Features = () => {
   const features = [
-    { 
-      icon: Zap, 
-      title: "Industry Expertise", 
-      description: "Pre-trained on your industry's common questions and workflows",
-      details: "Our chatbots come with industry-specific knowledge bases, understanding terminology, processes, and customer needs unique to your sector."
-    },
-    { 
-      icon: Shield, 
-      title: "Compliance Ready", 
-      description: "Built with industry regulations and requirements in mind",
-      details: "GDPR, HIPAA, and other compliance standards are built into our chatbots, ensuring your customer data is always protected."
-    },
-    { 
-      icon: Users, 
-      title: "Customer Language", 
-      description: "Speaks your customers' language and understands their needs",
-      details: "Natural language processing tailored to your industry's communication style and customer expectations."
-    },
-    { 
-      icon: TrendingUp, 
-      title: "Proven Results", 
-      description: "Optimized conversion paths based on industry best practices",
-      details: "Data-driven conversation flows that have been tested and optimized across thousands of interactions in your industry."
-    }
-  ];
-
-  const capabilities = [
     {
-      title: "Lead Generation",
-      description: "Automatically qualify and capture leads 24/7",
-      icon: Users
+      icon: Brain,
+      title: "Smart AI Conversations",
+      description: "Advanced natural language processing that understands context and provides human-like responses.",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Customer Support",
-      description: "Instant responses to common questions and issues",
-      icon: MessageSquare
+      icon: BarChart3,
+      title: "Real-time Analytics",
+      description: "Track lead quality, conversion rates, and chatbot performance with detailed insights.",
+      gradient: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Appointment Booking",
-      description: "Schedule meetings and appointments seamlessly",
-      icon: CheckCircle
+      icon: Shield,
+      title: "Lead Qualification",
+      description: "Automatically qualify leads based on your criteria and route high-quality prospects to your team.",
+      gradient: "from-purple-500 to-pink-500"
     },
     {
-      title: "Sales Assistance",
-      description: "Guide customers through purchase decisions",
-      icon: TrendingUp
+      icon: Clock,
+      title: "24/7 Availability",
+      description: "Never miss a lead. Your AI assistant works around the clock to engage visitors.",
+      gradient: "from-pink-500 to-red-500"
+    },
+    {
+      icon: Users,
+      title: "Multi-channel Support",
+      description: "Deploy across website, social media, and messaging platforms seamlessly.",
+      gradient: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Optimized",
+      description: "Perfect experience on all devices with responsive design and fast loading.",
+      gradient: "from-orange-500 to-yellow-500"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       {/* Header */}
-      <header className="border-b bg-background sticky top-0 z-50 shadow-sm">
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <nav className="max-w-7xl mx-auto flex items-center justify-between p-6">
-          <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-primary rounded-md flex items-center justify-center">
-              <Bot className="h-5 w-5 text-primary-foreground" />
+          <div className="flex items-center space-x-3">
+            <div className="h-10 w-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <Zap className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-foreground">
-              CyberBots AI
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Leads AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</a>
-            <a href="/solutions" className="text-muted-foreground hover:text-primary transition-colors">Solutions</a>
-            <a href="/features" className="text-primary font-medium">Features</a>
-            <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
-            <a href="/demo" className="text-muted-foreground hover:text-primary transition-colors">Get Demo</a>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+            <a href="/" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Home</a>
+            <a href="/solutions" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Solutions</a>
+            <a href="/features" className="text-blue-600 font-semibold">Features</a>
+            <a href="/pricing" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Pricing</a>
+            <a href="/demo" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Get Demo</a>
+            <a href="/admin" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Dashboard</a>
+            <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg" asChild>
               <a href="/signup">Get Started</a>
             </Button>
           </div>
@@ -82,99 +71,67 @@ const Features = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-primary/10 to-background">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-            Powerful Features for
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8">
+            <Zap className="w-4 h-4 mr-2" />
+            Powerful Features
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900">
+            Everything You Need to
             <br />
-            <span className="text-primary">Every Business</span>
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Convert More Leads
+            </span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-muted-foreground">
-            Our AI chatbots come packed with industry-specific features designed to automate your most important business processes and delight your customers.
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Our AI chatbot platform comes packed with features designed to maximize your lead generation and conversion rates.
           </p>
+          <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-2xl" asChild>
+            <a href="/demo">See Features in Action</a>
+          </Button>
         </div>
       </section>
 
-      {/* Core Features */}
+      {/* Features Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-            Why Choose Industry-Specific Chatbots?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-card border-border">
-                <CardHeader className="text-center">
-                  <feature.icon className="h-12 w-12 mx-auto text-primary mb-4" />
-                  <CardTitle className="text-foreground">{feature.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">{feature.description}</CardDescription>
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-white">
+                <CardHeader className="text-center pb-4">
+                  <div className={`h-16 w-16 mx-auto mb-4 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center shadow-lg`}>
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl text-gray-900">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{feature.details}</p>
+                  <CardDescription className="text-center text-gray-600 text-base leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Capabilities */}
-      <section className="py-20 px-6 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-            What Our Chatbots Can Do
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-card border-border">
-                <CardHeader>
-                  <capability.icon className="h-12 w-12 mx-auto text-primary mb-4" />
-                  <CardTitle className="text-foreground">{capability.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">{capability.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12 text-foreground">Trusted Across Industries</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { metric: "500+", label: "Active Chatbots", icon: Bot },
-              { metric: "98%", label: "Customer Satisfaction", icon: Star },
-              { metric: "24/7", label: "Support Available", icon: MessageSquare }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <stat.icon className="h-12 w-12 mx-auto text-primary mb-4" />
-                <div className="text-4xl font-bold mb-2 text-foreground">{stat.metric}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-primary/5">
+      <section className="py-20 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-foreground">
+          <h2 className="text-4xl font-bold mb-8">
             Ready to Experience These Features?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            See how our industry-specific chatbots can transform your business operations.
+          <p className="text-xl mb-8 opacity-90">
+            See how Leads AI can transform your lead generation process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-              <a href="/demo">Request Demo</a>
+            <Button size="lg" className="text-lg px-12 py-6 bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" asChild>
+              <a href="/signup">Start Free Trial</a>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-12 py-6" asChild>
-              <a href="/pricing">View Pricing</a>
+            <Button variant="outline" size="lg" className="text-lg px-12 py-6 border-2 border-white text-white hover:bg-white/10" asChild>
+              <a href="/demo">Book a Demo</a>
             </Button>
           </div>
         </div>
