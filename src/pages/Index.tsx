@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Bot, Zap, Shield, Users, TrendingUp, ArrowRight, Star, CheckCircle, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -49,44 +48,50 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-white sticky top-0 z-50 shadow-sm">
+      <header className="border-b bg-background sticky top-0 z-50 shadow-sm">
         <nav className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
-            <Bot className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">
+            <div className="h-8 w-8 bg-primary rounded-md flex items-center justify-center">
+              <Bot className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <span className="text-2xl font-bold text-foreground">
               CyberBots AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#solutions" className="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a>
-            <a href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">Features</a>
-            <a href="#demo" className="text-gray-600 hover:text-blue-600 transition-colors">Get Demo</a>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">Contact Us</Button>
+            <a href="#solutions" className="text-muted-foreground hover:text-primary transition-colors">Solutions</a>
+            <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
+            <a href="#demo" className="text-muted-foreground hover:text-primary transition-colors">Get Demo</a>
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <a href="/signup">Get Started</a>
+            </Button>
           </div>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-6 bg-gradient-to-br from-blue-50 to-white">
+      <section className="relative py-20 px-6 bg-gradient-to-br from-primary/10 to-background">
         <div className={`max-w-7xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
             AI Chatbots Tailored for
             <br />
-            <span className="text-blue-600">
+            <span className="text-primary">
               Every Business Niche
             </span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-gray-600">
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-muted-foreground">
             From real estate to restaurants, healthcare to e-commerce – we create custom AI chatbots that understand your industry and automate your most important customer interactions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="text-lg px-12 py-6 bg-blue-600 hover:bg-blue-700 text-white">
-              Explore Solutions
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="text-lg px-12 py-6 bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <a href="/signup">
+                Get Started Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-12 py-6 border-blue-200 text-blue-600 hover:bg-blue-50">
+            <Button variant="outline" size="lg" className="text-lg px-12 py-6 border-primary/20 text-primary hover:bg-primary/5">
               Watch Demo
             </Button>
           </div>
