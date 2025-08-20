@@ -126,7 +126,7 @@ const Signup = () => {
 
       toast({
         title: "Account Created Successfully!",
-        description: "Welcome to Leads.Ai! Check your email for next steps.",
+        description: "Welcome to LeadsAi! Check your email for next steps.",
       });
 
       // In a real implementation, you would redirect to a success page or dashboard
@@ -158,7 +158,7 @@ const Signup = () => {
               <Zap className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="text-2xl font-bold text-foreground">
-              Leads.Ai
+              LeadsAi
             </span>
           </div>
           <div className="flex items-center space-x-4">
