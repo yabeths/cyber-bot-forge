@@ -62,7 +62,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button size="lg" className="text-lg px-16 py-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
               <a href="/signup">
-                Start Converting Today
+                Start Free Trial
                 <ArrowRight className="ml-3 h-6 w-6" />
               </a>
             </Button>
