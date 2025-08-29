@@ -157,7 +157,7 @@ const Index = () => {
             <Button size="lg" className="text-lg px-16 py-8 bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" asChild>
               <a href="/signup">Start Free Trial</a>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-16 py-8 border-2 border-white text-white hover:bg-white/10" asChild>
+            <Button size="lg" className="text-lg px-16 py-8 bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" asChild>
               <a href="/demo">Book a Demo</a>
             </Button>
           </div>
