@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Bot, ArrowRight, Star, MessageSquare, Users, TrendingUp, Zap, Shield, BarChart3 } from 'lucide-react';
+import { Globe, ArrowRight, Star, MessageSquare, Users, TrendingUp, Rocket, Shield, BarChart3, Search } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -18,10 +17,10 @@ const Index = () => {
         <nav className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-3">
             <div className="h-10 w-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Zap className="h-6 w-6 text-white" />
+              <Rocket className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Leads AI
+              Business Launch
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
@@ -45,29 +44,29 @@ const Index = () => {
         
         <div className={`max-w-7xl mx-auto text-center relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8">
-            <Zap className="w-4 h-4 mr-2" />
-            AI-Powered Lead Generation
+            <Rocket className="w-4 h-4 mr-2" />
+            Complete Business Launch Solutions
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900">
-            Turn Visitors Into
+            Launch Your Business
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Qualified Leads
+              Online Today
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-600 leading-relaxed">
-            Smart AI chatbots that understand your business, engage your visitors 24/7, and convert them into high-quality leads automatically.
+            Professional website development, reliable hosting, SEO optimization, and ongoing support - everything you need to succeed online.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button size="lg" className="text-lg px-16 py-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
               <a href="/signup">
-                Start Free Trial
+                Get Your Launch Package
                 <ArrowRight className="ml-3 h-6 w-6" />
               </a>
             </Button>
             <Button size="lg" className="text-lg px-16 py-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
-              <a href="/demo">Book a Demo</a>
+              <a href="/demo">Book Consultation</a>
             </Button>
           </div>
         </div>
@@ -78,31 +77,31 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-gray-900">
-              Why Choose Leads AI?
+              Why Choose Business Launch?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI chatbots don't just chat—they qualify, nurture, and convert your website visitors into sales-ready leads.
+              We provide everything small businesses need to launch successfully online - from professional websites to ongoing support and growth.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                title: "24/7 Lead Capture", 
-                description: "Never miss a potential customer. Our AI works around the clock to engage visitors and capture leads.",
-                icon: MessageSquare,
+                title: "Professional Website", 
+                description: "Custom-designed, mobile-responsive websites that reflect your brand and drive results.",
+                icon: Globe,
                 gradient: "from-blue-500 to-cyan-500"
               },
               { 
-                title: "Smart Qualification", 
-                description: "AI automatically qualifies leads based on your criteria, sending only high-quality prospects to your team.",
+                title: "Reliable Hosting & Support", 
+                description: "99.9% uptime guarantee with monthly updates, backups, and ongoing technical support.",
                 icon: Shield,
                 gradient: "from-indigo-500 to-purple-500"
               },
               { 
-                title: "Instant Analytics", 
-                description: "Get real-time insights on lead quality, conversion rates, and chatbot performance.",
-                icon: BarChart3,
+                title: "SEO & Marketing", 
+                description: "Built-in SEO optimization and marketing strategy to attract your first 100 qualified leads.",
+                icon: Search,
                 gradient: "from-purple-500 to-pink-500"
               }
             ].map((feature, index) => (
@@ -125,12 +124,12 @@ const Index = () => {
       {/* Social Proof */}
       <section className="py-20 px-6 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-16 text-gray-900">Trusted by Growing Businesses</h2>
+          <h2 className="text-4xl font-bold mb-16 text-gray-900">Trusted by Small Businesses</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { metric: "500+", label: "Active Chatbots", icon: Bot },
-              { metric: "85%", label: "Lead Conversion Rate", icon: TrendingUp },
-              { metric: "24/7", label: "Always Available", icon: MessageSquare }
+              { metric: "300+", label: "Businesses Launched", icon: Rocket },
+              { metric: "99.9%", label: "Uptime Guarantee", icon: Shield },
+              { metric: "30 Days", label: "Results or Refund", icon: TrendingUp }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="h-20 w-20 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl">
@@ -148,17 +147,17 @@ const Index = () => {
       <section className="py-24 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">
-            Ready to 10x Your Lead Generation?
+            Ready to Launch Your Business?
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Join thousands of businesses already using Leads AI to automate their lead generation and boost conversions.
+            Join hundreds of businesses that have successfully launched online with our complete business solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" className="text-lg px-16 py-8 bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" asChild>
-              <a href="/signup">Start Free Trial</a>
+              <a href="/signup">Get Your Launch Package</a>
             </Button>
             <Button size="lg" className="text-lg px-16 py-8 bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" asChild>
-              <a href="/demo">Book a Demo</a>
+              <a href="/demo">Book Consultation</a>
             </Button>
           </div>
         </div>
@@ -169,14 +168,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-8">
             <div className="h-10 w-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Zap className="h-6 w-6 text-white" />
+              <Rocket className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Leads AI
+              Business Launch
             </span>
           </div>
           <p className="text-gray-600 mb-8 text-lg">
-            AI-powered chatbots that turn visitors into qualified leads
+            Complete web & hosting solutions for small businesses
           </p>
           <div className="flex justify-center space-x-8 text-gray-500 mb-8">
             <a href="#privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</a>
@@ -185,7 +184,7 @@ const Index = () => {
             <a href="/admin" className="hover:text-blue-600 transition-colors">Admin Dashboard</a>
           </div>
           <div className="pt-8 border-t text-gray-500">
-            © 2024 Leads AI. All rights reserved.
+            © 2024 Business Launch. All rights reserved.
           </div>
         </div>
       </footer>
