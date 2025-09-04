@@ -129,7 +129,7 @@ const Signup = () => {
         description: "Welcome to LeadsAi! Check your email for next steps.",
       });
 
-      // In a real implementation, you would redirect to a success page or dashboard
+      // In a real implementation, you would redirect to a success page
       // window.location.href = '/welcome';
       
     } catch (error) {

@@ -85,7 +85,6 @@ const Solutions = () => {
             <a href="/features" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Features</a>
             <a href="/pricing" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Pricing</a>
             <a href="/demo" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Get Demo</a>
-            <a href="/admin" className="text-muted-foreground hover:text-blue-600 transition-colors font-medium">Dashboard</a>
             <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg" asChild>
               <a href="/signup">Get Started</a>
             </Button>
