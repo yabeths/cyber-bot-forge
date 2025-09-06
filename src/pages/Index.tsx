@@ -42,20 +42,20 @@ const Index = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl"></div>
         
         <div className={`max-w-7xl mx-auto text-center relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8">
-            <MessageSquare className="w-4 h-4 mr-2" />
-            AI-Powered Lead Generation
-          </div>
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-8">
+              <Rocket className="w-4 h-4 mr-2" />
+              Complete Business Launch Solutions
+            </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900">
-            Convert Visitors into
+            Launch Your Business
             <br />
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Qualified Leads
+              Online Today
             </span>
           </h1>
           <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-600 leading-relaxed">
-            AI chatbots that engage visitors 24/7, capture leads automatically, and integrate seamlessly with your existing workflows.
+            Complete web development and hosting solutions for small businesses. Professional websites, reliable hosting, and ongoing support to help you succeed online.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button size="lg" className="text-lg px-16 py-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
@@ -76,30 +76,30 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-gray-900">
-              Why Choose AI Chatbots?
+              Why Choose Our Launch Solutions?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI chatbots work 24/7 to capture leads, answer questions, and qualify prospects - so you never miss an opportunity.
+              We provide everything you need to launch and grow your business online - from professional websites to ongoing hosting and AI-powered customer support.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                title: "24/7 Lead Capture", 
-                description: "Never miss a lead again. Our AI chatbots engage visitors instantly and capture their information automatically.",
-                icon: MessageSquare,
+                title: "Professional Web Design", 
+                description: "Custom, brand-aligned websites that showcase your business and convert visitors into customers.",
+                icon: Globe,
                 gradient: "from-blue-500 to-cyan-500"
               },
               { 
-                title: "Smart Qualification", 
-                description: "AI automatically qualifies leads by asking the right questions and routing hot prospects to your sales team.",
-                icon: Users,
+                title: "Reliable Hosting & Support", 
+                description: "99.9% uptime guarantee with automatic backups, security updates, and ongoing technical support.",
+                icon: Shield,
                 gradient: "from-indigo-500 to-purple-500"
               },
               { 
-                title: "Instant Response", 
-                description: "Provide immediate answers to common questions and keep prospects engaged while you're away.",
+                title: "Growth-Focused Marketing", 
+                description: "SEO optimization and marketing strategies designed to attract your first 100 qualified leads.",
                 icon: TrendingUp,
                 gradient: "from-purple-500 to-pink-500"
               }
@@ -126,9 +126,9 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-16 text-gray-900">Trusted by Growing Businesses</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
-              { metric: "10,000+", label: "Leads Captured", icon: Users },
-              { metric: "24/7", label: "AI Support", icon: MessageSquare },
-              { metric: "3x", label: "Conversion Increase", icon: TrendingUp }
+              { metric: "500+", label: "Businesses Launched", icon: Users },
+              { metric: "99.9%", label: "Uptime Guarantee", icon: Shield },
+              { metric: "30-Day", label: "Success Guarantee", icon: TrendingUp }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="h-20 w-20 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl">
@@ -146,10 +146,10 @@ const Index = () => {
       <section className="py-24 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-8">
-            Ready to Start Converting More Leads?
+            Ready to Launch Your Business Online?
           </h2>
           <p className="text-xl mb-12 opacity-90">
-            Join thousands of businesses using AI chatbots to capture more leads and grow their revenue.
+            Join hundreds of successful businesses that have launched with our complete web development and hosting solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" className="text-lg px-16 py-8 bg-white text-blue-600 hover:bg-gray-100 shadow-2xl" asChild>
@@ -174,7 +174,7 @@ const Index = () => {
             </span>
           </div>
           <p className="text-gray-600 mb-8 text-lg">
-            AI-powered chatbots that convert visitors into qualified leads
+            Complete web development and hosting solutions for small businesses
           </p>
           <div className="flex justify-center space-x-8 text-gray-500 mb-8">
             <a href="#privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</a>

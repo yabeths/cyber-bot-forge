@@ -38,7 +38,7 @@ const Demo = () => {
               <Bot className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="text-2xl font-bold text-foreground">
-              LeadsAi
+              Leads AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">

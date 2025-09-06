@@ -53,7 +53,7 @@ const Features = () => {
               <Rocket className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Business Launch
+              Leads AI
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-8">

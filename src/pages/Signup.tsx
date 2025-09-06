@@ -13,8 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { chatbotNiches } from '@/data/chatbotNiches';
 
 const Signup = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
-  const [billingCycle, setBillingCycle] = useState('monthly');
+  const [selectedPlan, setSelectedPlan] = useState('launch-professional');
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -26,54 +25,51 @@ const Signup = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const plans = [
+  const packages = [
     {
-      id: 'starter',
-      name: 'Starter',
-      monthlyPrice: 29,
-      yearlyPrice: 290,
-      description: 'Perfect for small businesses getting started',
+      id: 'launch-starter',
+      name: 'Starter Launch',
+      price: 750,
+      monthlyHosting: 150,
+      description: 'Perfect for small businesses getting online',
       features: [
-        '1 Chatbot',
-        'Up to 1,000 conversations/month',
-        'Basic analytics',
-        'Email support',
-        'Standard integrations'
+        'Professional 5-page website',
+        'Basic SEO setup',
+        '1 month free hosting included',
+        'Initial marketing strategy',
+        'Contact forms & basic integrations'
       ],
       popular: false
     },
     {
-      id: 'pro',
-      name: 'Professional',
-      monthlyPrice: 79,
-      yearlyPrice: 790,
-      description: 'Ideal for growing businesses',
+      id: 'launch-professional',
+      name: 'Professional Launch',
+      price: 1200,
+      monthlyHosting: 175,
+      description: 'Complete solution for growing businesses',
       features: [
-        '3 Chatbots',
-        'Up to 10,000 conversations/month',
-        'Advanced analytics & reports',
-        'Priority support',
-        'All integrations included',
-        'Custom branding',
-        'Lead management tools'
+        'Custom 8-page website',
+        'Advanced SEO optimization',
+        '2 months free hosting included',
+        'Lead generation strategy (first 100 leads)',
+        'E-commerce setup (optional)',
+        'Blog integration'
       ],
       popular: true
     },
     {
-      id: 'enterprise',
-      name: 'Enterprise',
-      monthlyPrice: 199,
-      yearlyPrice: 1990,
-      description: 'For large organizations with complex needs',
+      id: 'launch-enterprise',
+      name: 'Enterprise Launch',
+      price: 2000,
+      monthlyHosting: 200,
+      description: 'Premium solution for established businesses',
       features: [
-        'Unlimited chatbots',
-        'Unlimited conversations',
-        'White-label solution',
-        'Dedicated account manager',
+        'Custom unlimited page website',
+        'Premium SEO package',
+        '3 months free hosting included',
+        'Advanced marketing automation',
         'Custom integrations',
-        'Advanced security features',
-        'SLA guarantee',
-        'Training & onboarding'
+        'Priority support & training'
       ],
       popular: false
     }
@@ -117,8 +113,7 @@ const Signup = () => {
       console.log('Signup data:', {
         ...formData,
         selectedPlan,
-        billingCycle,
-        planDetails: plans.find(p => p.id === selectedPlan)
+        planDetails: packages.find(p => p.id === selectedPlan)
       });
 
       // Simulate API call
@@ -126,7 +121,7 @@ const Signup = () => {
 
       toast({
         title: "Account Created Successfully!",
-        description: "Welcome to LeadsAi! Check your email for next steps.",
+        description: "Welcome to Leads AI! Check your email for next steps.",
       });
 
       // In a real implementation, you would redirect to a success page
@@ -144,9 +139,9 @@ const Signup = () => {
     }
   };
 
-  const currentPlan = plans.find(p => p.id === selectedPlan);
-  const currentPrice = billingCycle === 'monthly' ? currentPlan?.monthlyPrice : currentPlan?.yearlyPrice;
-  const savings = currentPlan ? (currentPlan.monthlyPrice * 12) - currentPlan.yearlyPrice : 0;
+  const currentPlan = packages.find(p => p.id === selectedPlan);
+  const currentPrice = currentPlan?.price;
+  const monthlyHosting = currentPlan?.monthlyHosting;
 
   return (
     <div className="min-h-screen bg-background">
@@ -158,7 +153,7 @@ const Signup = () => {
               <Zap className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="text-2xl font-bold text-foreground">
-              LeadsAi
+              Leads AI
             </span>
           </div>
           <div className="flex items-center space-x-4">
@@ -176,12 +171,12 @@ const Signup = () => {
       <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Choose Your Perfect
+            Choose Your Launch
             <br />
-            <span className="text-primary">Chatbot Plan</span>
+            <span className="text-primary">Package</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Start automating your customer interactions today. Select a plan that fits your business needs and scale as you grow.
+            Select the perfect web development and hosting solution for your business. All packages include ongoing monthly hosting and support.
           </p>
         </div>
       </section>
@@ -189,40 +184,9 @@ const Signup = () => {
       {/* Pricing Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* Billing Toggle */}
-          <div className="flex justify-center mb-16">
-            <div className="bg-muted p-1 rounded-lg">
-              <div className="flex items-center space-x-4">
-                <button
-                  onClick={() => setBillingCycle('monthly')}
-                  className={`px-6 py-2 text-sm font-medium rounded-md transition-colors ${
-                    billingCycle === 'monthly'
-                      ? 'bg-background text-foreground shadow-sm'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  Monthly
-                </button>
-                <button
-                  onClick={() => setBillingCycle('yearly')}
-                  className={`px-6 py-2 text-sm font-medium rounded-md transition-colors relative ${
-                    billingCycle === 'yearly'
-                      ? 'bg-background text-foreground shadow-sm'
-                      : 'text-muted-foreground hover:text-foreground'
-                  }`}
-                >
-                  Yearly
-                  <Badge className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs">
-                    Save 17%
-                  </Badge>
-                </button>
-              </div>
-            </div>
-          </div>
-
           {/* Plans */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan) => (
+            {packages.map((plan) => (
               <Card
                 key={plan.id}
                 className={`relative hover:shadow-lg transition-all duration-300 ${
@@ -243,17 +207,15 @@ const Signup = () => {
                   <div className="mt-6">
                     <div className="flex items-end justify-center">
                       <span className="text-4xl font-bold text-foreground">
-                        ${billingCycle === 'monthly' ? plan.monthlyPrice : plan.yearlyPrice}
+                        ${plan.price}
                       </span>
                       <span className="text-muted-foreground ml-1">
-                        /{billingCycle === 'monthly' ? 'month' : 'year'}
+                        one-time
                       </span>
                     </div>
-                    {billingCycle === 'yearly' && (
-                      <p className="text-sm text-primary mt-2">
-                        Save ${(plan.monthlyPrice * 12) - plan.yearlyPrice} per year
-                      </p>
-                    )}
+                    <p className="text-sm text-primary mt-2">
+                      + ${plan.monthlyHosting}/month hosting
+                    </p>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -287,10 +249,7 @@ const Signup = () => {
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-3xl font-bold">Create Your Account</CardTitle>
               <CardDescription className="text-lg">
-                You've selected the <strong>{currentPlan?.name}</strong> plan at ${currentPrice}/{billingCycle === 'monthly' ? 'month' : 'year'}
-                {billingCycle === 'yearly' && savings > 0 && (
-                  <span className="block text-primary mt-1">Save ${savings} per year!</span>
-                )}
+                You've selected the <strong>{currentPlan?.name}</strong> package at ${currentPrice} one-time + ${monthlyHosting}/month hosting
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -398,7 +357,7 @@ const Signup = () => {
                     </>
                   ) : (
                     <>
-                      Start ${currentPrice}/{billingCycle === 'monthly' ? 'mo' : 'yr'} Plan
+                      Get ${currentPlan?.name} Package
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </>
                   )}
